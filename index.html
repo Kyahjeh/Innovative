@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assistive Aid in ICT - YouTube Style</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <button class="menu-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="logo">
+        <i class="fab fa-youtube"></i>
+        <span>Innovative</span>
+      </a>
+    </div>
+    <form class="search-form" onsubmit="return false;">
+      <input
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+        id="search-input"
+      />
+      <button aria-label="Search"><i class="fas fa-search"></i></button>
+    </form>
+    <div class="navbar-right">
+      <button aria-label="Upload video"><i class="fas fa-video"></i></button>
+      <button aria-label="Apps"><i class="fas fa-th"></i></button>
+      <button aria-label="Notifications"><i class="fas fa-bell"></i></button>
+      <button aria-label="User account" class="avatar-btn">
+        <img
+          src="https://i.pravatar.cc/40"
+          alt="User Avatar"
+          class="avatar"
+        />
+      </button>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-compass"></i> Explore</a>
+      <a href="#"><i class="fas fa-history"></i> History</a>
+      <a href="#"><i class="fas fa-book"></i> Library</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article class="video-card" tabindex="0" onclick="location.href='video1.html'">
+      <img
+        src="video1.jpeg"
+        alt="What is Assistive Devices"
+      />
+      <div class="video-info">
+        <h3>What is Assistive Devices?</h3>
+        <p>Tools that help people with disabilities perform tasks easily.</p>
+      </div>
+    </article>
+
+    <article
+      class="video-card"
+      tabindex="0"
+      onclick="location.href='video2.html'"
+    >
+      <img
+        src="video2.jpeg"
+        alt="Purpose of Assistive Devices"
+      />
+      <div class="video-info">
+        <h3>Purpose of Assistive Devices</h3>
+        <p>
+          Assistive tools support people to perform tasks they find
+          difficult independently.
+        </p>
+      </div>
+    </article>
+
+    <article
+      class="video-card"
+      tabindex="0"
+      onclick="location.href='video3.html'"
+    >
+      <img
+        src="video3.png"
+        alt="Types of Assistive Devices"
+      />
+      <div class="video-info">
+        <h3>Types of Assistive Devices</h3>
+        <p>Mobility, Hearing, and Visual aids for diverse needs.</p>
+      </div>
+    </article>
+
+    <article
+      class="video-card"
+      tabindex="0"
+      onclick="location.href='video4.html'"
+    >
+      <img
+        src="video4.jpeg"
+        alt="Examples of Assistive Devices"
+      />
+      <div class="video-info">
+        <h3>Applications & Benefits of Assistive Devices</h3>
+        <p>Real-world tools improving independence & quality of life.</p>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    // Optional: Keyboard accessibility for video cards
+    document.querySelectorAll(".video-card").forEach((card) => {
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          card.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
